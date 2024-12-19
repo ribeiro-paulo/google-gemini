@@ -1,0 +1,35 @@
+@use "@angular/material" as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:host {
+  @include mat.sidenav-overrides(
+    (
+      container-background-color: var(--mat-sys-surface-container-low),
+    )
+  );
+
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--mat-sys-secondary),
+      filled-label-text-color: var(--mat-sys-on-secondary),
+    )
+  );
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
